@@ -1,4 +1,6 @@
 /src/src/dwm/*.o
 /src/src/dwm/*.tar.gz
 /src/src/dwm/dwm
-
+/src/src/st/*.o
+/src/src/st/*.tar.gz
+/src/src/st/st
