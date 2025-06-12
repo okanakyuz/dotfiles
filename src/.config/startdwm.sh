@@ -1,5 +1,5 @@
 #!/bin/sh
 
-xrandr --output Virtual-1 --mode 1920x1080
+xrandr --output "$(xrandr | awk '/ connected primary/{print $1; exit}')" --mode 1920x1080
 feh --bg-scale ~/.config/wp.jpg
 exec dwm
