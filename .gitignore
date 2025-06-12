@@ -4,3 +4,6 @@
 /src/src/st/*.o
 /src/src/st/*.tar.gz
 /src/src/st/st
+/src/src/dmenu/*.o
+/src/src/dmenu/*.tar.gz
+/src/src/dmenu/dmenu
