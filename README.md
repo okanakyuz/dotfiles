@@ -17,4 +17,5 @@ To install dwm please be sure that fallowing packages are already installed on y
 * libxft (libxft-dev)
 * libxinerama (libxinerma-dev)
 * ttf-dejavu (dejavu-font)
+* python-pywal (python3-pywal)
 /src/tools folder contains all dwm files that need to build
