@@ -19,3 +19,7 @@ To install dwm please be sure that fallowing packages are already installed on y
 * ttf-dejavu (dejavu-font)
 * python-pywal (python3-pywal)
 /src/tools folder contains all dwm files that need to build
+
+## picom
+
+Install picom on your system to use picom dotfile with stow. Picom also loaded on startup.
