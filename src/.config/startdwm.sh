@@ -3,33 +3,24 @@
 
 change_wallpaper () 
 {
-#	while true;
-#	do 	
-		wallpaper=$(find ~/.config/wallpapers/ -type f | shuf -n 1)
-		feh --bg-scale $wallpaper ;
-
-		wal -i $wallpaper ;
-
-
-		echo "dwm.normbordercolor:  $(grep 'norm_border' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dwm.normbgcolor:  $(grep 'norm_bg' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dwm.normfgcolor:  $(grep 'norm_fg' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dwm.selbordercolor:  $(grep 'sel_border' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dwm.selbgcolor:  $(grep 'sel_bg' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dwm.selfgcolor:  $(grep 'sel_fg' ~/.cache/wal/colors-wal-dwm.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources ;
-		echo "dmenu.background:  $(grep '\[SchemeNorm\]' ~/.cache/wal/colors-wal-dmenu.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources
-		echo "dmenu.foreground:  $(grep '\[SchemeNorm\]' ~/.cache/wal/colors-wal-dmenu.h | awk -F'"' '{print $4}')" >> ~/.cache/wal/colors.Xresources
-		echo "dmenu.selbackground:  $(grep '\[SchemeSel\]' ~/.cache/wal/colors-wal-dmenu.h | awk -F'"' '{print $2}')" >> ~/.cache/wal/colors.Xresources
-		echo "dmenu.selforeground:  $(grep '\[SchemeSel\]' ~/.cache/wal/colors-wal-dmenu.h | awk -F'"' '{print $4}')" >> ~/.cache/wal/colors.Xresources
-
-		xrdb -merge ~/.cache/wal/colors.Xresources ;
-
-#		sleep 600 ;
-#	done
+	wallpaper=$(find ~/.config/wallpapers/ -type f | shuf -n 1)
+	wal -i $wallpaper ;
+	cd ~/src/dwm && make clean && make ;
+	cd ~/src/dmenu && make clean && make ;
+	cd ~/src/st && make clean && make ;
+	
+	case ":$PATH:" in 
+		*":$HOME/src/dwm"*);;
+		*) export PATH="$PATH:$HOME/src/dwm:$HOME/src/dmenu:$HOME/src/st";;
+	esac
+	cd ~ ;
+	
+	feh --bg-scale $wallpaper ;
 }
 
 
 xrandr --output "$(xrandr | awk '/ connected primary/{print $1; exit}')" --mode 1920x1080
-change_wallpaper &
+change_wallpaper 
 picom &
-exec dwm
+exec ~/src/dwm/dwm
+
