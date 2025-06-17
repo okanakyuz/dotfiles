@@ -7,3 +7,5 @@
 /src/src/dmenu/*.o
 /src/src/dmenu/*.tar.gz
 /src/src/dmenu/dmenu
+/src/src/dmenu/stest
+/src/.config/wallpapers
