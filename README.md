@@ -30,3 +30,7 @@ Install picom on your system to use picom dotfile with stow. Picom also loaded o
 ## tmux  
 
 Install tmux on your system to use tmux dotfile with stow. Picom also loaded on startup.
+
+## Emacs  
+
+Install emacs on your system to use emacs dotfile with stow. Picom also loaded on startup.
