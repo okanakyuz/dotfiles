@@ -6,3 +6,4 @@ sudo pacman -Sy --noconfirm zsh exa bat fzf tmux ranger fd ripgrep htop lazygit
 stow src
 stow picom
 stow tmux
+stow emacs
