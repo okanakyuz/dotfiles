@@ -21,7 +21,8 @@ change_wallpaper ()
 
 xrandr --output "$(xrandr | awk '/ connected primary/{print $1; exit}')" --mode 1920x1080
 change_wallpaper 
-picom &
+# picom &
+xcompmgr &
  ~/src/dwm-bar/dwm_bar.sh &
 exec ~/src/dwm/dwm
 

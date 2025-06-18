@@ -20,6 +20,7 @@ To install dwm please be sure that fallowing packages are already installed on y
 * python-pywal (python3-pywal)
 * xorg-xrdb (x11-server-utils)
 * xorg-xsetroot (x11-server-utils)
+* xcompmgr
 /src/tools folder contains all dwm files that need to build
 
 ## picom
