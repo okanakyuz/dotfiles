@@ -16,8 +16,10 @@ To install dwm please be sure that fallowing packages are already installed on y
 * libx11 (libx11-dev)
 * libxft (libxft-dev)
 * libxinerama (libxinerma-dev)
-* ttf-dejavu (dejavu-font)
+* ttf-firacode-nerd 
 * python-pywal (python3-pywal)
+* xorg-xrdb (x11-server-utils)
+* xorg-xsetroot (x11-server-utils)
 /src/tools folder contains all dwm files that need to build
 
 ## picom
