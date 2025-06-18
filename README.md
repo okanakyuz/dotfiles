@@ -26,3 +26,7 @@ To install dwm please be sure that fallowing packages are already installed on y
 ## picom
 
 Install picom on your system to use picom dotfile with stow. Picom also loaded on startup.
+
+## tmux  
+
+Install tmux on your system to use tmux dotfile with stow. Picom also loaded on startup.
