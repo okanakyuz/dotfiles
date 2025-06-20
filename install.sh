@@ -8,3 +8,4 @@ stow src
 stow picom
 stow tmux
 stow emacs
+stow neovim
