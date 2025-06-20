@@ -7,7 +7,7 @@ return {
         highlight = { enable = true },
         indent = { enable = true },
         ensure_installed = {
-          "lua", "go", "bash", "json", "yaml", "toml", "c", "cpp". "rust"
+          "lua", "go", "bash", "json", "yaml", "toml", "c", "cpp", "rust"
         },
       })
     end,
