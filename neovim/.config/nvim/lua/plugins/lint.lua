@@ -6,8 +6,6 @@ return {
     },
     config = function()
       local null_ls = require("null-ls")
-      local mason_path = vim.fn.stdpath("data") .. "/mason/bin"
-
       null_ls.setup({
         sources = {
           require("none-ls.diagnostics.cpplint"),
