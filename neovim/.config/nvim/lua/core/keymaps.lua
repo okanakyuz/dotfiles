@@ -1,3 +1,10 @@
+local ok_dap, dap = pcall(require, "dap")
+local ok_dapui, dapui = pcall(require, "dapui")
+if not (ok_dap and ok_dapui) then
+  return
+end
+
+
 local dap = require("dap")
 local dapui = require("dapui")
 
