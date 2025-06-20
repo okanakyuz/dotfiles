@@ -10,7 +10,6 @@ return {
             extra_args = { "--filter=-whitespace" },
             }),
             null_ls.builtins.diagnostics.golangci_lint,
-            null_ls.builtins.diagnostics.clippy,
         },
         })
     end,
