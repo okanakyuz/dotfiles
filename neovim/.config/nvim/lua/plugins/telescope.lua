@@ -2,13 +2,11 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope-fzf-native.nvim",
+      "nvim-lua/plenary.nvim"
     },
-    config = function()
+    config = function() {
       require("telescope").setup {
         defaults = {
-          -- tercihen burada ayar yapabilirsin
         },
         pickers = {
           git_files = {
@@ -16,8 +14,7 @@ return {
           },
         },
       }
-      -- load fzf native extension
-      require("telescope").load_extension("fzf")
     end,
+    }
   },
 }
