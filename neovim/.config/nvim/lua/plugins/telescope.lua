@@ -4,7 +4,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim"
     },
-    config = function() {
+    config = function() 
       require("telescope").setup {
         defaults = {
         },
@@ -15,6 +15,5 @@ return {
         },
       }
     end,
-    }
   },
 }
