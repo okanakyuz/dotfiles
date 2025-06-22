@@ -19,10 +19,16 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = {
-          { name = "nvim_lsp" },
+          { name = "nvim_lsp" , keyword_length = 1, max_item_count = 20, group_index = 1 },
           -- { name = "tags" },
           -- { name = "buffer" }, 
           -- { name = "path" },  
+        },
+        formatting = {
+          format = function(entry, vim_item)
+            vim_item.dup = { buffer = 0, path = 0, nvim_lsp = 0 }[entry.source.name] or 0
+            return vim_item
+          end
         },
       })
     end,
