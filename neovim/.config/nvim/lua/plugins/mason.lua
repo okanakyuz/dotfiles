@@ -1,5 +1,11 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
     config = function()
