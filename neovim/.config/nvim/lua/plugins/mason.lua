@@ -34,6 +34,7 @@ return {
           end,
         },
       })
+	end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
