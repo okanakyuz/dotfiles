@@ -11,7 +11,9 @@ vim.diagnostic.config({
     severity = { min = vim.diagnostic.severity.WARN },
   },
   virtual_text = false,
-  signs = true,
+  signs = {
+    severity = { min = vim.diagnostic.severity.WARN },
+  },
   update_in_insert = false,
   severity_sort = true,
 })
