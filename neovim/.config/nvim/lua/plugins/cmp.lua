@@ -20,6 +20,9 @@ return {
         }),
         sources = {
           { name = "nvim_lsp" },
+          -- { name = "tags" },
+          -- { name = "buffer" }, 
+          -- { name = "path" },  
         },
       })
     end,
