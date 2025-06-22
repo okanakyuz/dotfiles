@@ -19,25 +19,21 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { "clangd", "rust_analyzer" },
         automatic_installation = false,
-      })
-  
-      require("mason-lspconfig").setup_handlers({
-        function(server_name)
-          if server_name ~= nil then
-            require("lspconfig")[server_name].setup({})
-          end
-        end,
-        ["rust_analyzer"] = function()
-            require("lspconfig").rust_analyzer.setup({
-            settings = {
-              ["rust-analyzer"] = {
-                checkOnSave = { command = "clippy" },
+        handlers = {
+          function(server_name)
+              require("lspconfig")[server_name].setup {}
+          end,
+          ["rust_analyzer"] = function()
+              require("lspconfig").rust_analyzer.setup({
+              settings = {
+                ["rust-analyzer"] = {
+                  checkOnSave = { command = "clippy" },
+                },
               },
-            },
-          })
-        end,
+            })
+          end,
+        },
       })
-    end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
