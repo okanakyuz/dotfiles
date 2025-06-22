@@ -5,6 +5,9 @@ vim.opt.softtabstop = 4
 vim.opt.number = true         
 vim.opt.relativenumber = true 
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 
 vim.diagnostic.config({
   underline = {
