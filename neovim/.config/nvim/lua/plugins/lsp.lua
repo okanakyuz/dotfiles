@@ -9,7 +9,7 @@ return {
         cmd = { "clangd", "--header-insertion=never" },
         on_attach = function(client, bufnr)
           if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(bufnr, false)
+            vim.lsp.inlay_hint.enable(false, {bufnr=0})
           end
         end,
       })
