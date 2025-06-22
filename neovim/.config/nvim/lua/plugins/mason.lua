@@ -17,10 +17,18 @@ return {
   
       require("mason-lspconfig").setup_handlers({
         function(server_name)
-          require("lspconfig")[server_name].setup({})
+          if server_name ~= nil then
+            require("lspconfig")[server_name].setup({})
+          end
         end,
         ["rust_analyzer"] = function()
-          -- rust_analyzer'ı zaten elle yapılandırdığın için burada bir şey yapma
+            require("lspconfig").rust_analyzer.setup({
+            settings = {
+              ["rust-analyzer"] = {
+                checkOnSave = { command = "clippy" },
+              },
+            },
+          })
         end,
       })
     end,
