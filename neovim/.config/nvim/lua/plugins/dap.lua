@@ -44,6 +44,7 @@ return {
           end,
           cwd = "${workspaceFolder}",
           stopAtEntry = true,
+		  miDebuggerPath = "/usr/bin/gdb",
         },
       }
       dap.configurations.c = dap.configurations.cpp
