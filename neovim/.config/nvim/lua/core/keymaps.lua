@@ -29,3 +29,6 @@ vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
 vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 vim.keymap.set("n", "<space>fe", ":Telescope file_browser<CR>")
+
+vim.keymap.set("n", "<leader>g", ":Neogit<CR>", { desc = "Neogit" })
+
