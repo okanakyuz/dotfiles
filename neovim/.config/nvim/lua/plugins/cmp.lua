@@ -24,12 +24,6 @@ return {
           -- { name = "buffer" }, 
           -- { name = "path" },  
         },
-        formatting = {
-          format = function(entry, vim_item)
-            vim_item.dup = { buffer = 0, path = 0, nvim_lsp = 0 }[entry.source.name] or 0
-            return vim_item
-          end
-        },
       })
     end,
   },
