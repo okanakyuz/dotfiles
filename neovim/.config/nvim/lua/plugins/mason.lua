@@ -12,7 +12,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = { "clangd", "rust_analyzer" },
-        automatic_installation = true,
+        automatic_installation = false,
       })
     end,
   },
