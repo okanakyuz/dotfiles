@@ -33,4 +33,11 @@ Install tmux on your system to use tmux dotfile with stow.
 
 ## Emacs  
 
-Install emacs on your system to use emacs dotfile with stow. 
+Install emacs on your system to use emacs dotfile with stow.
+
+## Ranger
+
+Fallowing packages should be installed before stow 
+* ueberzug
+* python-pygments
+* bat
