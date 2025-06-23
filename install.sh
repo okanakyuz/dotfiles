@@ -4,6 +4,7 @@ sudo pacman -Sy --noconfirm base-devel git xorg-server xorg-xinit xorg-xrandr li
 sudo pacman -Sy --noconfirm zsh exa bat fzf tmux ranger fd ripgrep htop lazygit unzip go rustup gdb fzf
 sudo pacman -Sy --noconfirm emacs 
 sudo pacman -Sy --noconfirm ranger ueberzug python-pygments bat
+sudo pacman -Sy --noconfirm zsh starship zoxide
 
 
 stow src
@@ -12,3 +13,4 @@ stow tmux
 stow emacs
 stow neovim
 stow ranger
+stow zsh
