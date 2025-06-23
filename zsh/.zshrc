@@ -77,6 +77,12 @@ alias ll='ls -lah'
 alias gs='git status'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias n='nvim'
+alias v='nvim'
 alias c='clear'
-alias zc='nvim ~/.zshrc'
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+
