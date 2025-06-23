@@ -1,0 +1,57 @@
+# === GENEL AYARLAR ===
+add_newline = false  # her komut sonrası boş satır koymaz
+
+# === DİZİN GÖSTERİMİ ===
+[directory]
+read_only = " 🔒"
+style = "green"
+truncation_length = 1
+truncate_to_repo = false
+format = "[$path]($style) "
+
+[directory.substitutions]
+"~" = "~"
+"/home" = "🏠"
+"/usr" = "usr"       # ikon sorununu çözer
+"/usr/bin" = "bin"
+
+# === GIT BİLGİLERİ ===
+[git_branch]
+symbol = "🌿 "
+style = "cyan"
+
+[git_status]
+style = "yellow"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+# === PROMPT SEMBOLÜ ===
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+
+# === SHELL SÜRESİ ===
+[cmd_duration]
+min_time = 2000
+format = " took [$duration]($style)"
+
+# === DİL MODÜLLERİ ===
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[golang]
+style = "bold blue"
+symbol = "🐹 "
+
+[rust]
+style = "bold red"
+symbol = "🦀 "
+
+[c]
+disabled = false
+
+[python]
+disabled = false
+
