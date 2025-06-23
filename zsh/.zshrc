@@ -1,9 +1,9 @@
-# === ORTAM ===
 export LANG="en_US.UTF-8"
 export EDITOR="nvim"
 export PATH="$HOME/.local/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH"
 
-# === EĞER GEREKLİYSE EKLENTİLERİ İNDİR ===
+## Download Files ##
+# === 
 ZSH_PLUGIN_DIR="$HOME/.zsh"
 
 if [ ! -d "$ZSH_PLUGIN_DIR/zsh-autosuggestions" ]; then
@@ -28,9 +28,9 @@ source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 #source "$ZSH_PLUGIN_DIR/git-completion.bash"
 
-# === ZSH AYARLARI ===
-setopt autocd              # klasör adı yazınca cd
-setopt correct             # yazım düzelt
+# === ZSH ===
+setopt autocd 
+setopt correct 
 setopt interactivecomments
 setopt append_history
 setopt hist_ignore_dups
@@ -61,10 +61,6 @@ precmd() { vcs_info }
 autoload -U colors && colors
 zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':vcs_info:*' enable git
-
-PROMPT='%{$fg[cyan]%}${vcs_info_msg_0_}%{$reset_color%}%{$fg[green]%}%1~ > %{$reset_color%}'
-
-
 
 # Pacman / yay
 [[ -f /usr/share/bash-completion/completions/pacman ]] && source /usr/share/bash-completion/completions/pacman
