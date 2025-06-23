@@ -17,7 +17,6 @@ if [ ! -d "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting" ]; then
 fi
 
 
-# Git completions kontrol & indirme
 if [ ! -f "$ZSH_PLUGIN_DIR/git-completion.bash" ] || [ ! -f "$ZSH_PLUGIN_DIR/_git" ]; then
   curl -fsSL -o "$ZSH_PLUGIN_DIR/git-completion.bash" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
   curl -fsSL -o "$ZSH_PLUGIN_DIR/_git" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
@@ -27,7 +26,7 @@ fi
 # === PLUGINLER ===
 source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$ZSH_PLUGIN_DIR/git-completion.bash"
+#source "$ZSH_PLUGIN_DIR/git-completion.bash"
 
 # === ZSH AYARLARI ===
 setopt autocd              # klasör adı yazınca cd
