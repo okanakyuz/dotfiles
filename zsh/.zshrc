@@ -16,9 +16,18 @@ if [ ! -d "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting"
 fi
 
+
+# Git completions kontrol & indirme
+if [ ! -f "$ZSH_PLUGIN_DIR/git-completion.bash" ] || [ ! -f "$ZSH_PLUGIN_DIR/_git" ]; then
+  curl -fsSL -o "$ZSH_PLUGIN_DIR/git-completion.bash" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  curl -fsSL -o "$ZSH_PLUGIN_DIR/_git" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+fi
+
+
 # === PLUGINLER ===
 source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZSH_PLUGIN_DIR/git-completion.bash"
 
 # === ZSH AYARLARI ===
 setopt autocd              # klasör adı yazınca cd
@@ -34,7 +43,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# === TAMAMLAMA ===
+# === COMPLATE ===
+fpath=("$ZSH_PLUGIN_DIR" $fpath)
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
@@ -55,10 +65,7 @@ zstyle ':vcs_info:*' enable git
 
 PROMPT='%{$fg[cyan]%}${vcs_info_msg_0_}%{$reset_color%}%{$fg[green]%}%1~ > %{$reset_color%}'
 
-# === TAMAMLAMA DOSYALARI ===
 
-# Git tamamlayıcı
-[[ -f /usr/share/bash-completion/completions/git ]] && source /usr/share/bash-completion/completions/git
 
 # Pacman / yay
 [[ -f /usr/share/bash-completion/completions/pacman ]] && source /usr/share/bash-completion/completions/pacman
