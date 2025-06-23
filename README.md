@@ -41,3 +41,7 @@ Fallowing packages should be installed before stow
 * ueberzug
 * python-pygments
 * bat
+
+## ZSH
+
+Zsh with starship
